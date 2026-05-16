@@ -1,0 +1,475 @@
+name: HomeMate 8 Gang Multi Switch (PN-WFP-8S+)
+products:
+  - id: oprmsr8yorky43ly
+    manufacturer: HomeMate
+    model: PN-WFP-8S+
+entities:
+# Switches
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "1"
+    dps:
+      - id: 1
+        name: switch
+        type: boolean
+        optional: true
+      - id: 1
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "2"
+    dps:
+      - id: 2
+        name: switch
+        type: boolean
+        optional: true
+      - id: 2
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "3"
+    hidden: unavailable
+    dps:
+      - id: 3
+        name: switch
+        type: boolean
+        optional: true
+      - id: 3
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "4"
+    hidden: unavailable
+    dps:
+      - id: 4
+        name: switch
+        type: boolean
+        optional: true
+      - id: 4
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "5"
+    hidden: unavailable
+    dps:
+      - id: 5
+        name: switch
+        type: boolean
+        optional: true
+      - id: 5
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "6"
+    hidden: unavailable
+    dps:
+      - id: 6
+        name: switch
+        type: boolean
+        optional: true
+      - id: 6
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "7"
+    hidden: unavailable
+    dps:
+      - id: 111
+        name: switch
+        type: boolean
+        optional: true
+      - id: 111
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+  - entity: switch
+    translation_key: switch_x
+    translation_placeholders:
+      x: "8"
+    hidden: unavailable
+    dps:
+      - id: 110
+        name: switch
+        type: boolean
+        optional: true
+      - id: 110
+        name: available
+        type: boolean
+        optional: true
+        mapping:
+          - dps_val: null
+            value: false
+          - value: true
+
+
+# Master switch
+  - entity: switch
+    icon: "mdi:toggle-switch"
+    name: Main switch
+    dps:
+      - id: 13
+        type: boolean
+        name: switch
+
+# Timers for switches
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "1"
+    hidden: unavailable
+    dps:
+      - id: 7
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "2"
+    hidden: unavailable
+    dps:
+      - id: 8
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "3"
+    hidden: unavailable
+    dps:
+      - id: 9
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "4"
+    hidden: unavailable
+    dps:
+      - id: 10
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "5"
+    hidden: unavailable
+    dps:
+      - id: 11
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "6"
+    hidden: unavailable
+    dps:
+      - id: 12
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "7"
+    hidden: unavailable
+    dps:
+      - id: 104
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+  - entity: time
+    category: config
+    translation_key: timer_x
+    translation_placeholders:
+      x: "8"
+    hidden: unavailable
+    dps:
+      - id: 103
+        type: integer
+        name: second
+        optional: true
+        range:
+          min: 0
+          max: 86400
+
+# Settings
+  - entity: select
+    translation_key: initial_state
+    category: config
+    dps:
+      - id: 14
+        type: string
+        name: option
+        optional: true
+        mapping:
+          - dps_val: "power_off"
+            value: "power_off"
+          - dps_val: "power_on"
+            value: "power_on"
+          - dps_val: "last"
+            value: "last"
+  - entity: select
+    translation_key: backlight_on_color
+    name: Backlight On Color
+    category: config
+    dps:
+      - id: 105
+        type: string
+        name: option
+        optional: true
+        mapping:
+          - dps_val: Red
+            value: Red
+          - dps_val: Blue
+            value: Blue
+          - dps_val: White
+            value: White
+          - dps_val: None
+            value: None
+  - entity: select
+    translation_key: backlight_off_color
+    name: Backlight Off Color
+    category: config
+    dps:
+      - id: 106
+        type: string
+        name: option
+        optional: true
+        mapping:
+          - dps_val: Red
+            value: Red
+          - dps_val: Blue
+            value: Blue
+          - dps_val: White
+            value: White
+          - dps_val: None
+            value: None
+  - entity: number
+    translation_key: backlight_brightness
+    name: Backlight Brightness
+    category: config
+    dps:
+      - id: 107
+        type: integer
+        name: value
+        range:
+          min: 0
+          max: 100
+  - entity: lock
+    translation_key: child_lock
+    name: Child Lock
+    category: config
+    icon: mdi:lock
+    dps:
+      - id: 198
+        type: boolean
+        name: lock
+        optional: true
+  - entity: switch
+    translation_key: als_sensor
+    name: ALS Sensor
+    category: config
+    dps:
+      - id: 112
+        type: boolean
+        name: switch
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "1"
+    name: Switch 1 Mode
+    category: config
+    dps:
+      - id: 160
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "2"
+    name: Switch 2 Mode
+    category: config
+    dps:
+      - id: 161
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "3"
+    name: Switch 3 Mode
+    category: config
+    dps:
+      - id: 162
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "4"
+    name: Switch 4 Mode
+    category: config
+    dps:
+      - id: 163
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "5"
+    name: Switch 5 Mode
+    category: config
+    dps:
+      - id: 164
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "6"
+    name: Switch 6 Mode
+    category: config
+    dps:
+      - id: 165
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "7"
+    name: Switch 7 Mode
+    category: config
+    dps:
+      - id: 166
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
+  - entity: select
+    translation_key: switch_x_mode
+    translation_placeholders:
+      - x: "8"
+    name: Switch 8 Mode
+    category: config
+    dps:
+      - id: 167
+        type: string
+        name: option
+        mapping:
+          - dps_val: Bistate
+            value: Bistate
+          - dps_val: Monostate
+            value: Monostate
